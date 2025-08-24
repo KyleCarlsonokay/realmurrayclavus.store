@@ -2,54 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Realmurrayclavus Interactive</title>
+  <title>Realmurrayclavus Button</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: system-ui, sans-serif;
-      background: #f4f4f4;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-    }
-    input {
-      padding: 10px;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      width: 200px;
-      text-align: center;
+      font-family: system-ui, sans-serif;
+      background: #f4f4f4;
     }
     button {
-      padding: 10px 20px;
-      font-size: 1rem;
+      padding: 15px 30px;
+      font-size: 1.5rem;
       cursor: pointer;
     }
     #output {
       margin-top: 20px;
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>Type something!</h1>
-  <input type="text" id="userInput" placeholder="Type here">
-  <button onclick="checkInput()">Submit</button>
+  <button onclick="showReal()">Press me</button>
   <div id="output"></div>
 
   <script>
-    function checkInput() {
-      const input = document.getElementById("userInput").value.trim().toLowerCase();
-      const output = document.getElementById("output");
-      
-      if(input === "real") {
-        output.textContent = "real";
-      } else {
-        output.textContent = "";
-      }
+    function showReal() {
+      document.getElementById("output").textContent = "real";
     }
+  </script>
+</body>
+</html>
+
 
 
