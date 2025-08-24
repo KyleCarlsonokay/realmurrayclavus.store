@@ -2,36 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Realmurrayclavus</title>
+  <title>Realmurrayclavus Interactive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: system-ui, sans-serif;
       background: #f4f4f4;
-      color: #333;
-      text-align: center;
-      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    p {
+    input {
+      padding: 10px;
       font-size: 1.2rem;
+      margin-bottom: 20px;
+      width: 200px;
+      text-align: center;
     }
-    a {
-      color: #0070f3;
-      text-decoration: none;
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
     }
-    a:hover {
-      text-decoration: underline;
+    #output {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to realmurrayclavus.store 🚀</h1>
-  <p>This site is hosted for free on GitHub Pages.</p>
-  <p>Check out my <a href="https://github.com/kylecarlsonokay" target="_blank">GitHub</a>!</p>
-</body>
-</html>
+  <h1>Type something!</h1>
+  <input type="text" id="userInput" placeholder="Type here">
+  <button onclick="checkInput()">Submit</button>
+  <div id="output"></div>
+
+  <script>
+    function checkInput() {
+      const input = document.getElementById("userInput").value.trim().toLowerCase();
+      const output = document.getElementById("output");
+      
+      if(input === "real") {
+        output.textContent = "real";
+      } else {
+        output.textContent = "";
+      }
+    }
+
 
